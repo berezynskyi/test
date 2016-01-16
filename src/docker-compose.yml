@@ -1,5 +1,4 @@
-web:
-  build: .
+test:
   ports:
    - "5000:5000"
   volumes:
@@ -8,3 +7,13 @@ web:
    - mongodb
 mongodb:
   image: mongo
+
+test:
+  ports:
+   - "3000:3000"
+  volumes:
+   - .:/code
+  links:
+   - redis
+redis:
+  image: redis
