@@ -1,0 +1,15 @@
+FROM    centos:centos6
+
+
+# Install Node.js and npm
+RUN     yum install -y nodejs npm
+
+# Install app dependencies
+COPY package.json /home/berezynskyi/work/docker_test/dockerv2/package.json
+RUN cd /home/berezynskyi/work/docker_test/dockerv2; npm install
+
+# Bundle app source
+COPY . /home/berezynskyi/work/docker_test/dockerv2
+
+EXPOSE  8080
+CMD ["node", "/home/berezynskyi/work/docker_test/dockerv2/index.js"]

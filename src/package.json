@@ -1,0 +1,13 @@
+{
+  "name": "node_for_docker",
+  "version": "0.0.1",
+  "description": "Try to start few containers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "berezynskyi",
+  "dependencies": {
+    "express": "^4.13.1"
+  }
+}
